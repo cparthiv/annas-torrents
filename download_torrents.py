@@ -12,7 +12,7 @@ if not tb == '':
     tb = round(float(tb), 2)
 okay_to_download = input("Confirm download with Y / N: ")
 
-if not okay_to_download == "Y":
+if not okay_to_download.upper() == "Y":
     sys.exit()
 
 print("Downloading torrent list...")

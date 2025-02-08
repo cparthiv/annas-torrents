@@ -9,8 +9,7 @@ tb = input(
     "Please enter the number of terabytes worth of torrents you would like to download (empty for no limit): ")
 
 if not tb == '':
-    tb = round(float(input(
-        "Please enter the number of terabytes worth of torrents you would like to download: ")), 2)
+    tb = round(float(tb), 2)
 okay_to_download = input("Confirm download with Y / N: ")
 
 if not okay_to_download == "Y":
@@ -37,4 +36,6 @@ with urllib.request.urlopen('https://annas-archive.org/dyn/generate_torrents?max
         print(
             f"{current}/{length}: {i['display_name']} - {round(i['torrent_size']/1024)}kb ")
         current += 1
+
+    print("Torrents downloaded. Use a BitTorrent client to join the network and start seeding.")
     f.close()

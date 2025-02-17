@@ -26,7 +26,7 @@ Downloading the `.torrent` files shouldn't be a problem, but by joining and seed
 ## Example usage
 
 ```py
-python download_torrents.py
+python main.py
 
 Please enter the number of terabytes worth of torrents you would like to download (empty for no limit): 1
 Confirm download with Y / N: y

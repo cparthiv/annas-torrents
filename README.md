@@ -21,7 +21,7 @@ To actually download and help seed the files, use a torrent client!
 
 ## Disclaimer
 
-Downloading the `.torrent` files shouldn't be a problem, but by joining and seeding these torrents, you are aiding in the distribution of material that may not be legal in your area of residence. These torrents are less hunted after compared to other material that would get you in trouble with anti-piracy agencies or the government, to be safe, use a VPN when you are downloading or seeding. Seed at your own risk.
+Downloading the `.torrent` files shouldn't be a problem, but by joining and seeding these torrents, you are aiding in the distribution of material that may not be legal in your area of residence. These torrents are less hunted after compared to other material that would get you in trouble with anti-piracy agencies or the government. However, to be safe, use a VPN when you are downloading or seeding. Seed at your own risk.
 
 ## Example usage
 

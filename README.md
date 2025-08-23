@@ -3,13 +3,13 @@
 Help preserve the largest truly open library in human history!
 Python program to download torrent files that need seeding the most: go to [Anna's archive](https://annas-archive.org/torrents) for information.
 
-Now linked [here](https://annas-archive.org/torrents#generate_torrent_list) on the website!
+Now linked on Anna's Archive: [Generate torrent list](https://annas-archive.org/torrents#generate_torrent_list).
 
 ## Usage
 
 - Run the program using python, and use the command line (CLI) and follow the prompts given.
 - Torrents will be added to the `/torrents` directory, which will be created if it doesn't exist yet.
-- The program will ask for the number of terabytes (TB) you would like to download and then will ask you to confirm.
+- The program will ask for how many terabytes (TB) of content you want to target. Decimal values are allowed (e.g., `0.05` for `50 GB`, `10` for `10 TB`). Press Enter for no limit. You'll then be asked to confirm. Note: the script only downloads the `.torrent` files (metadata and trackers), not the actual content.
 - Information on progress and torrents will be provided as downloaded.
 
 ## What next?
@@ -28,7 +28,7 @@ Downloading the `.torrent` files shouldn't be a problem, but by joining and seed
 ```py
 python main.py
 
-Please enter the number of terabytes worth of torrents you would like to download (empty for no limit): 1
+Please enter the number of terabytes of content to target (decimals allowed; press Enter for no limit): 0.05
 Confirm download with Y / N: y
 Downloading torrent list...
 Destination directory not found: creating now.

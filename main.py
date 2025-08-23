@@ -6,7 +6,7 @@ import json
 DEST_DIR = "torrents"
 
 tb = input(
-    "Please enter the number of terabytes worth of torrents you would like to download (empty for no limit): ")
+    "Please enter the number of terabytes of content to target (e.g., 0.05 for 50 GB, 10 for 10 TB; press Enter for no limit): ")
 
 if not tb == '':
     tb = round(float(tb), 2)

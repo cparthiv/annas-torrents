@@ -1,9 +1,16 @@
 import os
-import urllib.request
+import urllib.request, urllib.error
 import sys
 import json
 
 DEST_DIR = "torrents"
+DOMAINS = [
+    'annas-archive.org',
+    'annas-archive.se',
+    'annas-archive.li',
+    'annas-archive.pm',
+    'annas-archive.in',
+]
 
 tb = input(
     "Please enter the number of terabytes of content to target (e.g., 0.05 for 50 GB, 10 for 10 TB; press Enter for no limit): ")
@@ -15,9 +22,25 @@ okay_to_download = input("Confirm download with Y / N: ")
 if not okay_to_download.upper() == "Y":
     sys.exit()
 
+# Find operational mirror
+domain = None
+for url in DOMAINS:
+    try:
+        req = urllib.request.Request('https://' + url, method="HEAD")
+        with urllib.request.urlopen(req, timeout=5) as response:
+            if 200 <= response.status < 400:
+                print(f"Found operational mirror: {url}")
+                domain = url
+                break
+    except urllib.error.URLError:
+        continue
+if not domain:
+    print("No operational mirror found.")
+    sys.exit()
+
 print("Downloading torrent list...")
 
-with urllib.request.urlopen('https://annas-archive.org/dyn/generate_torrents?max_tb=' + str(tb) + '&format=json') as f:
+with urllib.request.urlopen(f'https://{domain}/dyn/generate_torrents?max_tb={tb}&format=json') as f:
     torrents = json.load(f)
     length = len(torrents)
     current = 1

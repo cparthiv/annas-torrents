@@ -1,9 +1,9 @@
 # Anna's Torrents
 
 Help preserve the largest truly open library in human history!
-Python program to download torrent files that need seeding the most: go to [Anna's archive](https://annas-archive.org/torrents) for information.
+Python program to download torrent files that need seeding the most: go to [Anna's archive](https://annas-archive.li/torrents) for information.
 
-Now linked on Anna's Archive: [Generate torrent list](https://annas-archive.org/torrents#generate_torrent_list).
+Now linked on Anna's Archive: [Generate torrent list](https://annas-archive.li/torrents#generate_torrent_list).
 
 ## Usage
 

@@ -5,11 +5,9 @@ import json
 
 DEST_DIR = "torrents"
 DOMAINS = [
-    'annas-archive.org',
-    'annas-archive.se',
-    'annas-archive.li',
-    'annas-archive.pm',
-    'annas-archive.in',
+    'annas-archive.gl',
+    'annas-archive.pk',
+    'annas-archive.gd',
 ]
 
 tb = input(
